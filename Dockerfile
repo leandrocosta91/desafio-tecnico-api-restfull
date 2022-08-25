@@ -1,11 +1,6 @@
 FROM node:18-alpine
 
-WORKDIR /usr/app
+WORKDIR /var/www
 
-RUN npm init -y
-RUN npm install express
-
-EXPOSE 3000
-
-CMD [ "node", "index.js" ]
+CMD [ "node", "src/index.js" ]
 
