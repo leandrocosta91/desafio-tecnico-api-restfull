@@ -13,10 +13,7 @@ app.use(express.static("public"));
 app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-server.use(route);
+app.use(route);
 
-app.get('/', (req, res) => {
-    res.send('Hello world - Desafio Calcomp Desafio Api Rest Full');
-});
 
 app.listen(PORT, HOST);
